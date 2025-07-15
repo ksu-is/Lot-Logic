@@ -1,13 +1,13 @@
-Vehicle Tracker Project Roadmap
+Lot Logic
 
 ## Sprint 1:
-- [] Report and Confirm a project idea
-- [] Join the class organization KSU-IS in GitHub
-- [] Create the repository
-- [] Make a ReadME file explaining the project
-- [] Create this project roadmap on GitHub
-- [] Explore atleast one existing Python code
-- [] Turn in Sprint #1 on D2L
+- [x] Report and Confirm a project idea
+- [x] Join the class organization KSU-IS in GitHub
+- [x] Create the repository
+- [x] Make a ReadME file explaining the project
+- [x] Create this project roadmap on GitHub
+- [x] Explore atleast one existing Python code
+- [x] Turn in Sprint #1 on D2L
 
 ## Sprint 2: 
 - [] Create a .py file for code
