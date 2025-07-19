@@ -10,7 +10,7 @@ Lot Logic
 - [x] Turn in Sprint #1 on D2L
 
 ## Sprint 2: 
-- [x] Create a .py file for code
+- [x] Create a .py file for codes
 - [x] Make small updates and add commit messages through GitHub Desktop
 - [x] Committed at least 6 code changes of significant size with explanation given
 - [x] Track progress on planned and emerging tasks in the projectroadmap.md document
