@@ -1,28 +1,14 @@
-import os
-import platform 
-import tkinter as tk
-import random
-from functools import partial
-from itertools import ifilter
-from tkinter import ttk
-from tkinter import messagebox
+# Global list to represent available parking spots
+parking_spots = []
 
-vehicle_list = []
-
-def add_vehicle(): 
-    global vehicle_list
-    print("What is the Year, Make and Model of the vehicle?")
-    v_year = input("Year:")
-    v_make = input("Make:")
-    v_model = input("model:")
-    v_ID = str(random.randint(0,1000))
-    
-    vehicle = v_ID + " " + v_year + " " + v_make + " " + v_model
-    vehicle_list.append(vehicle)
-    
-    print(f"Vehicle ID: {vehicle} has been added to the list, with vehicle ID {v_ID} ")
-    print(vehicle_list)
-
+def add_parking_spot():
+    new_spot = input("Enter the new parking spot ID to add: ").upper()
+    if new_spot not in parking_spots:
+        parking_spots.append(new_spot)
+        print(f"Parking spot {new_spot} added successfully.")
+    else:
+        print(f"Parking spot {new_spot} is already in the system.")
+# fix the rest from here 
 def remove_vehicle():
     global vehicle_list2
     
