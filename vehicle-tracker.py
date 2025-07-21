@@ -8,49 +8,49 @@ def add_parking_spot():
         print(f"Parking spot {new_spot} added successfully.")
     else:
         print(f"Parking spot {new_spot} is already in the system.")
-# fix the rest from here 
-def remove_vehicle():
-    global vehicle_list2
-    
-    removal = input("Do you know the ID for the Vehicle to remove? ")
-    if removal == "no":
-            print(vehicle_list)
-            removal = input("Input Id for vehicle:")
+
+def remove_parking_spot():
+    spot_id = input("Enter the parking spot ID to remove: ").upper()
+    if spot_id in parking_spots:
+        parking_spots.remove(spot_id)
+        print(f"Parking spot {spot_id} removed.")
     else:
-        Id_search = [word for word in vehicle_list if word in removal]
-        print(Id_search)
-        vehicle_list.remove(new_ID)
-    
+        print(f"Parking spot {spot_id} not found.")
 
-    print(vehicle_list)
+def view_parking_inventory():
+    print("\nCurrent Available Parking Spots:")
+    if parking_spots:
+        for spot in parking_spots:
+            print(f"- {spot}")
+    else:
+        print("No available parking spots at the moment.")
 
+def lotlogic_menu():
+    print("Welcome to LotLogic Smart Parking Tracker!\n")
+    menu = {
+        '1': "Add Parking Spot",
+        '2': "Remove Parking Spot",
+        '3': "View Parking Inventory",
+        '4': "Exit"
+    }
 
-def print_inventory():
-     global vehicle_list
-     print(vehicle_list)
-
-def opening_menu():
-     print("Welcome to J&J Car Tracker! What would you like to do?")
-     menu = {}
-     menu ['1'] = "Add Vehicle"
-     menu ['2'] = "Remove Vehicle"
-     menu ['3'] = "Find Vehicle ID"
-     menu ['4'] = "Exit"
-     while True: 
-        options=menu.keys()
-        for entry in options: 
-             print (entry, menu[entry])
-
-        selection = input("Please Select:") 
-        if selection =='1': 
-            add_vehicle() 
-        elif selection == '2': 
-            remove_vehicle()
+    while True:
+        print("\nWhat would you like to do?")
+        for key, value in menu.items():
+            print(f"{key}. {value}")
+        
+        selection = input("Please select an option: ")
+        if selection == '1':
+            add_parking_spot()
+        elif selection == '2':
+            remove_parking_spot()
         elif selection == '3':
-            print_inventory()
-        elif selection == '4': 
+            view_parking_inventory()
+        elif selection == '4':
+            print("Exiting LotLogic. Goodbye!")
             break
-        else: 
-            print ("Unknown Option Selected!")
-# Try to fix for lot Logic use
-opening_menu()
+        else:
+            print("Unknown option selected. Please try again.")
+
+# Start the application
+lotlogic_menu()
